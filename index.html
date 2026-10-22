@@ -31,7 +31,7 @@
 
 <h1>Privacy Policy</h1>
 <p class="updated">Application: <strong>Photo Resizer</strong> (package <code>com.kont.photoresizer</code>)<br>
-Last updated: 19 September 2026</p>
+Last updated: 21 October 2026</p>
 
 <p>This policy explains what data the Photo Resizer application handles. It is written to match
 the actual behaviour of the app, not a generic template.</p>
@@ -50,21 +50,29 @@ developer. Your photos, file names and settings are never sent to the developer.
 <h2>3. How your photos are handled</h2>
 <ul>
   <li>Photos are chosen with the Android photo picker, or shared to the app from your gallery.
-      The app has <em>no permission to read your photo library</em>.</li>
+      The app has <em>no permission to read your photo library</em>. Only if you choose
+      "Keep everything, including location", photos are chosen with the Android file picker instead
+      (see section 7).</li>
   <li>Each photo is resized and compressed on your phone. A temporary copy is written to the app's
       private cache during saving and deleted immediately afterwards.</li>
   <li>The smaller copy is saved to your gallery in <code>Pictures/Photo Resizer</code>. Your
       original photos are never changed or deleted.</li>
   <li>Photo information (EXIF): by default the date and camera details are kept and the
-      <strong>location is removed</strong>. You can choose to remove everything or keep everything.</li>
+      <strong>location is removed</strong>. You can choose to remove everything or keep everything.
+      If you keep everything, the location recorded in the photo is copied into the smaller copy on your
+      phone; it is never sent to the developer or anywhere else.</li>
   <li>A photo leaves your phone only if you share it yourself through the Android share menu.</li>
 </ul>
 
 <h2>4. Data stored on your device</h2>
 <p>The app keeps no list of your photos. Only small app records are stored in its private
-storage: whether Pro was purchased (confirmed again with Google Play) and how many batches you
-have compressed (so the rating window is shown at most once). They are deleted when you uninstall
-the app or clear its data.</p>
+storage: whether Pro was purchased (confirmed again with Google Play), your last chosen target
+and options (for example 200 KB, a form size, the format and the photo-information choice, so they are
+ready the next time), and the rating-window counters (how many batches you have compressed, on how many
+separate days the app was opened and the total time it was used, so the rating window is shown at most
+once). The last chosen target and the rating-window counters may be included in Android's own backup and
+device transfer if you have enabled it; no photo, file name or location is stored. They are deleted when
+you uninstall the app or clear its data.</p>
 
 <h2>5. Purchases</h2>
 <p>An optional one-time "Pro" purchase is processed entirely by Google Play. The developer never
@@ -98,11 +106,15 @@ in full.</p>
   <li><strong>Storage write (WRITE_EXTERNAL_STORAGE)</strong> &mdash; requested only on Android 9
       and older, to save the smaller copy to your gallery. Android 10 and newer need no
       permission for this.</li>
+  <li><strong>Photo location (ACCESS_MEDIA_LOCATION)</strong> &mdash; Android 10 and newer. Requested
+      only when you choose "Keep everything, including location", so that the location stored in your
+      photos can be copied into the smaller copy. Android shows this request as access to "photos and
+      videos"; the app still opens only the photos you choose. If you refuse, the location is removed.</li>
   <li>Internet access, network state, advertising ID and Android Ad Services permissions are
       declared by the Google Mobile Ads SDK; billing permission by Google Play Billing.</li>
 </ul>
-<p>The app does not access your location, microphone, camera, contacts, SMS or call history, and
-cannot browse your photo library.</p>
+<p>The app does not access your device's location, microphone, camera, contacts, SMS or call history,
+and cannot browse your photo library.</p>
 
 <h2>8. Children</h2>
 <p>The app is a general-audience tool and is not directed at children under 13. The developer
@@ -121,7 +133,7 @@ data</em>.</p>
 
 <h1>Gizlilik Politikası</h1>
 <p class="updated">Uygulama: <strong>Fotoğraf Küçültücü</strong> (paket <code>com.kont.photoresizer</code>)<br>
-Son güncelleme: 19 Eylül 2026</p>
+Son güncelleme: 21 Ekim 2026</p>
 
 <p>Bu politika, Fotoğraf Küçültücü uygulamasının hangi verileri işlediğini açıklar. Metin,
 uygulamanın gerçek davranışına göre yazılmıştır.</p>
@@ -140,21 +152,27 @@ Fotoğraflarınız, dosya adları ve ayarlarınız geliştiriciye gönderilmez.<
 <h2>3. Fotoğraflarınız nasıl işlenir</h2>
 <ul>
   <li>Fotoğraflar Android fotoğraf seçicisiyle seçilir veya galeriden uygulamaya paylaşılır.
-      Uygulamanın <em>fotoğraf arşivinizi okuma izni yoktur</em>.</li>
+      Uygulamanın <em>fotoğraf arşivinizi okuma izni yoktur</em>. Yalnızca "Konum dahil hepsini koru"
+      seçeneğini seçerseniz fotoğraflar bunun yerine Android dosya seçicisiyle seçilir (bkz. bölüm 7).</li>
   <li>Her fotoğraf telefonunuzda boyutlandırılır ve sıkıştırılır. Kaydetme sırasında uygulamanın
       özel önbelleğine geçici bir kopya yazılır ve hemen ardından silinir.</li>
   <li>Küçültülmüş kopya galerinizde <code>Pictures/Photo Resizer</code> klasörüne kaydedilir.
       Orijinal fotoğraflarınız hiçbir zaman değiştirilmez veya silinmez.</li>
   <li>Fotoğraf bilgileri (EXIF): varsayılan olarak tarih ve kamera bilgisi korunur,
-      <strong>konum silinir</strong>. Her şeyi silmeyi veya her şeyi korumayı seçebilirsiniz.</li>
+      <strong>konum silinir</strong>. Her şeyi silmeyi veya her şeyi korumayı seçebilirsiniz.
+      Hepsini korursanız fotoğrafta kayıtlı konum, telefonunuzdaki küçültülmüş kopyaya aktarılır;
+      geliştiriciye ya da başka bir yere gönderilmez.</li>
   <li>Bir fotoğraf telefonunuzdan yalnızca siz Android paylaşım menüsüyle paylaşırsanız çıkar.</li>
 </ul>
 
 <h2>4. Cihazınızda saklanan veriler</h2>
 <p>Uygulama fotoğraflarınızın listesini tutmaz. Özel alanında yalnızca küçük uygulama kayıtları
-saklanır: Pro'nun satın alınıp alınmadığı (Google Play ile yeniden doğrulanır) ve kaç kez toplu
-küçültme yaptığınız (puan penceresi en fazla bir kez gösterilsin diye). Uygulamayı kaldırdığınızda
-veya verilerini temizlediğinizde silinir.</p>
+saklanır: Pro'nun satın alınıp alınmadığı (Google Play ile yeniden doğrulanır), son seçtiğiniz hedef
+ve seçenekler (ör. 200 KB, bir form ölçüsü, biçim ve fotoğraf bilgisi seçimi; bir sonraki açılışta hazır
+olsun diye) ve puan penceresi sayaçları (kaç kez toplu küçültme yaptığınız, uygulamanın kaç ayrı gün
+açıldığı ve toplam kullanım süresi; puan penceresi en fazla bir kez gösterilsin diye). Son seçilen hedef ve
+puan penceresi sayaçları, açtıysanız Android'in kendi yedeğine ve cihaz aktarımına dahil olabilir; fotoğraf,
+dosya adı veya konum saklanmaz. Uygulamayı kaldırdığınızda veya verilerini temizlediğinizde silinir.</p>
 
 <h2>5. Satın almalar</h2>
 <p>İsteğe bağlı tek seferlik "Pro" satın alması tamamen Google Play tarafından işlenir. Geliştirici
@@ -188,11 +206,15 @@ bölümünden değiştirebilirsiniz. Onay vermeseniz de uygulama tam olarak çal
   <li><strong>Depolamaya yazma (WRITE_EXTERNAL_STORAGE)</strong> &mdash; yalnızca Android 9 ve
       öncesinde, küçültülmüş kopyayı galeriye kaydetmek için istenir. Android 10 ve sonrası için
       izin gerekmez.</li>
+  <li><strong>Fotoğraf konumu (ACCESS_MEDIA_LOCATION)</strong> &mdash; Android 10 ve sonrası. Yalnızca
+      "Konum dahil hepsini koru" seçeneğini seçtiğinizde, fotoğraflarınızda kayıtlı konum küçültülmüş kopyaya
+      aktarılabilsin diye istenir. Android bu isteği "fotoğraf ve videolara erişim" olarak gösterir; uygulama
+      yine yalnızca seçtiğiniz fotoğrafları açar. Reddederseniz konum silinir.</li>
   <li>İnternet erişimi, ağ durumu, reklam kimliği ve Android Ad Services izinleri Google Mobile Ads
       SDK'sı, satın alma izni Google Play Billing tarafından bildirilir.</li>
 </ul>
-<p>Uygulama konumunuza, mikrofonunuza, kameranıza, kişilerinize, SMS veya arama geçmişinize
-erişmez ve fotoğraf arşivinizde gezinemez.</p>
+<p>Uygulama cihazınızın konumuna, mikrofonunuza, kameranıza, kişilerinize, SMS veya arama
+geçmişinize erişmez ve fotoğraf arşivinizde gezinemez.</p>
 
 <h2>8. Çocuklar</h2>
 <p>Uygulama genel izleyiciye yönelik bir araçtır ve 13 yaş altı çocuklara yönelik değildir.
